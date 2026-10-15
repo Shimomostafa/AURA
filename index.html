@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./bootstrap/bootstrap-5.3.8-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap"
+        rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"></head>
+<body>
+    <main class="d-flex flex-column gap-5">
+        <header>
+            <nav class="navbar d-flex justify-content-center navbar-expand-lg " >
+                <div class="container">
+                    <a class="navbar-brand" href="#hero"><img src="images/Gemini_Generated_Image_y2juf5y2juf5y2ju-removebg-preview.png" alt=""></a>
+                    <div class="d-flex order-lg-2">
+                        <div class="d-flex align-items-center justify-content-end order-last">
+                            <button class="navbar-toggler order-2 order-lg-0 " type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                                aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                        </div>
+                        <div class="order-1 d-flex align-items-center justify-content-end ">
+                            <button class="btn position-relative " type="button" data-bs-toggle="offcanvas" data-bs-target="#bagCanvas"
+                                aria-controls="bagCanvas">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span class="bag-count">0</span>
+                            </button>
+                            <button class="btn position-relative " type="button" data-bs-toggle="offcanvas" data-bs-target="#wishlistCanvas" aria-controls="wishlistCanvas">
+                                <i class="fa-solid fa-heart"></i>
+                                <span class="wishlist-count">0</span>
+                            </button>
+                        </div>
+                    </div>
+                <!-- </div> -->
+                    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                        <ul class="navbar-nav d-flex gap-3 mx-auto mb-2 mb-lg-0 ">
+                            <li class="nav-item">
+                                <button data-section="home" class="nav-btn go-section active" aria-current="page" type="button">home</button>
+                            </li>
+                            <li class="nav-item">
+                                <button data-section="SKINCARE" class="nav-btn go-section" type="button">Shop</button>
+                            </li>
+                            <li class="nav-item">
+                                <button data-section="about" class="nav-btn go-section "  type="button">About</button>
+                            </li>
+                            <li class="nav-item">
+                                <button data-section="contact" class="nav-btn go-section" type="button">Contact</button>
+                            </li>
+                            </ul>
+                    </div>
+                    
+                </div>
+            </nav>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="bagCanvas" aria-labelledby="bagCanvasLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="bagCanvasLabel">YOUR BAG</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
+                    </button>
+                </div>
+                <div class="offcanvas-body">
+                    <div class="bag-items">
+                    </div>
+                    <div class="bag-total">
+                        
+                    </div>
+                    <button class="checkout-btn w-100 mt-3 ">
+                        CHECKOUT
+                    </button>
+                </div>
+            </div>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="wishlistCanvas" aria-labelledby="wishlistCanvasLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="wishlistCanvasLabel">YOUR wishlist</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
+                    </button>
+                </div>
+                <div class="offcanvas-body">
+                    <div class="wishlist-items">
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="row">
+                    <div class="layer">
+                        <h1>SKIN, ELEVATED.</h1>
+                        <p>Beauty essentials designed to make every day feel a little more beautiful.</p>
+                        <div class="buttons d-flex  gap-2">
+                            <button data-section="shop-by-category" class="btn go-section shop">shop collection</button>
+                            <button data-section="about" class="btn go-section explore">Explore Beauty</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="brand-statement">
+            <div class="container">
+                <div class="row d-flex align-items-center justify-content-center text-center">
+                    <h2>BEAUTY, ELEVATED.</h2>
+                    <div class="line"></div>
+                    <p class="quote">"Thoughtfully chosen skincare and makeup for rituals that feel as beautiful as they look."</p>
+                    <span>Cold-pressed in Grasse • Hand-poured in Paris • Formulated for daily radiance</span>
+                </div>
+            </div>
+        </section>
+        <section id="shop-by-category" class="shop-category">
+            <div class="container">
+                <div class="row justify-content-center align-items-center text-center">
+                    <h2>Shop by Category</h2>
+                    <span>Explore conscious skincare formulations, breathable pigments, and iconic beauty staples.</span>
+                        <div class="cards row justify-content-center g-4 mt-4 p-4">
+                            
+                        </div>
+                </div>
+            </div>
+        </section>
+
+            <section id="SKINCARE" class="products-section">
+                <div class="container">
+                    <div class="text-center">
+                        <h2>SKINCARE</h2>
+                        <span>Thoughtfully crafted essentials for healthy, radiant skin.</span>
+                    </div>
+                    <div class="skincare-cards aura-cards row g-4 mt-4"></div>
+                </div>
+            </section>
+            <section id="MAKEUP" class="products-section">
+                <div class="container">
+                    <div class="text-center">
+                        <h2>MAKEUP</h2>
+                        <span>Soft pigments and effortless beauty essentials.</span>
+                    </div>
+                    <div class="makeup-cards aura-cards row g-4 mt-4"></div>
+                </div>
+            </section>
+            <section id="NEWARRIVALS" class="products-section">
+                <div class="container">
+                    <div class="text-center">
+                        <h2>NEW ARRIVALS</h2>
+                        <span>Discover the latest additions to the AURA collection.</span>
+                    </div>
+                    <div class="new-cards aura-cards row g-4 mt-4"></div>
+                </div>
+            </section>
+            <section id="BESTSELLERS" class="products-section">
+                <div class="container">
+                    <div class="text-center">
+                        <h2>BEST SELLERS</h2>
+                        <span>Our most loved beauty essentials.</span>
+                    </div>
+                    <div class="best-cards aura-cards row g-4 mt-4"></div>
+                </div>
+            </section>
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="">
+                            <h2>OUR STORY</h2>
+                            <p>At AURA, we believe beauty is more than a routine — it's a moment of self-care, confidence, and feeling your best.</p>
+                            <p>
+                            
+                            We bring together thoughtfully selected skincare and makeup essentials designed to celebrate your natural beauty. From
+                            nourishing skincare to effortless makeup, every detail reflects our passion for quality, simplicity, and timeless
+                            elegance.
+                            </p>
+                            <p>
+                            Our philosophy is simple: feel good in your skin, and let your beauty shine naturally.
+                            </p>
+                            <p>
+                            AURA is your everyday reminder that you deserve a little luxury.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="image">
+                            <img src="images/Gemini_Generated_Image_tm1it1tm1it1tm1i about.jfif" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="aura-contact" id="contact">
+            <div class="container">
+        
+                <div class="contact-heading text-center">
+                    <span class="contact-eyebrow">LET'S CONNECT</span>
+                    <h2>We'd love to hear <em>from you.</em></h2>
+                    <p>
+                        Have a question or need a little help?
+                        We're always happy to hear from you.
+                    </p>
+                </div>
+        
+                <div class="row g-5 align-items-start">
+        
+                    <!-- Contact Information -->
+                    <div class="col-lg-5">
+                        <div class="contact-info">
+                            <span class="contact-small-title">GET IN TOUCH</span>
+        
+                            <h3>Here for your<br>
+                                <em>beauty journey.</em>
+                            </h3>
+        
+                            <p class="contact-description">
+                                Whether you have a question about a product,
+                                your order, or your skincare routine, we're
+                                here to make your AURA experience special.
+                            </p>
+        
+                            <div class="contact-detail">
+                                <div class="contact-icon">
+                                    <i class="fa-regular fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4>Email Us</h4>
+                                    <p>hello@aurabeauty.com</p>
+                                </div>
+                            </div>
+        
+                            <div class="contact-detail">
+                                <div class="contact-icon">
+                                    <i class="fa-regular fa-clock"></i>
+                                </div>
+                                <div>
+                                    <h4>Customer Care</h4>
+                                    <p>Monday – Friday · 9 AM – 5 PM</p>
+                                </div>
+                            </div>
+        
+                            <div class="contact-socials">
+                                <span>FOLLOW OUR JOURNEY</span>
+        
+                                <div class="social-links">
+                                    <a href="#" aria-label="Instagram">
+                                        <i class="fa-brands fa-instagram"></i>
+                                    </a>
+                                    <a href="#" aria-label="Facebook">
+                                        <i class="fa-brands fa-facebook-f"></i>
+                                    </a>
+                                    <a href="#" aria-label="Pinterest">
+                                        <i class="fa-brands fa-pinterest-p"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Contact Form -->
+                    <div class="col-lg-7">
+                        <div class="contact-form-card">
+        
+                            <span class="form-eyebrow">WE'RE LISTENING</span>
+                            <h3>Send us a message</h3>
+                            <p class="form-description">
+                                Fill in the details below and tell us how we can help.
+                            </p>
+        
+                            <form id="contactForm">
+        
+                                <div class="row g-4">
+        
+                                    <div class="col-md-6">
+                                        <label for="contactName">Your Name</label>
+                                        <input type="text" id="contactName" name="name" placeholder="Full name" required>
+                                    </div>
+        
+                                    <div class="col-md-6">
+                                        <label for="contactEmail">Email Address</label>
+                                        <input type="email" id="contactEmail" name="email" placeholder="you@example.com"
+                                            required>
+                                    </div>
+        
+                                    <div class="col-12">
+                                        <label for="contactSubject">Subject</label>
+                                        <select id="contactSubject" name="subject" required>
+                                            <option value="" disabled selected>
+                                                Choose a subject
+                                            </option>
+                                            <option value="Product Inquiry">
+                                                Product Inquiry
+                                            </option>
+                                            <option value="Order Support">
+                                                Order Support
+                                            </option>
+                                            <option value="Skincare Advice">
+                                                Skincare Advice
+                                            </option>
+                                            <option value="Other">
+                                                Other
+                                            </option>
+                                        </select>
+                                    </div>
+        
+                                    <div class="col-12">
+                                        <label for="contactMessage">Your Message</label>
+                                        <textarea id="contactMessage" name="message" rows="5"
+                                            placeholder="Tell us how we can help..." required></textarea>
+                                    </div>
+        
+                                    <div class="col-12">
+                                        <button type="submit" class="contact-submit">
+                                            <span>Send Message</span>
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        </button>
+        
+                                        <p class="form-note">
+                                            <i class="fa-solid fa-heart"></i>
+                                            We're always happy to help.
+                                        </p>
+                                    </div>
+        
+                                </div>
+                            </form>
+        
+                            <p id="contactFeedback" class="contact-feedback" role="status" aria-live="polite"></p>
+        
+                        </div>
+                    </div>
+        
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <script src="./bootstrap/bootstrap-5.3.8-dist/js/bootstrap.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
